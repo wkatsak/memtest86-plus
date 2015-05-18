@@ -14,7 +14,7 @@
 /* CONSERVATIVE_SMP - If set to 0, SMP will be enabled by default */
 /* Might be enabled in future revision after extensive testing */
 /* In all cases, SMP is disabled by defaut on server platform */
-#define CONSERVATIVE_SMP 1
+#define CONSERVATIVE_SMP 0
 
 /* BEEP_MODE - Beep on error. Default off, Change to 1 to enable */
 #define BEEP_MODE 0
