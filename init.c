@@ -630,19 +630,8 @@ void detect_imc(void)
 
 void smp_default_mode(void)
 {
-	int i, result;
-	char *cpupsn = cpu_id.brand_id.char_array;
-  char *disabledcpu[] = { "Opteron", "Xeon", "Genuine Intel" };
-  
-  for(i = 0; i < 3; i++) 
-  {
-  	result = strstr(cpupsn , disabledcpu[i]);
-  	if(result != -1) { v->fail_safe |= 0b10; }
-  }
-  
   // For 5.01 release, SMP disabled by defualt by config.h toggle
   if(CONSERVATIVE_SMP) { v->fail_safe |= 0b10; }
-  	
 }
 
 /*
