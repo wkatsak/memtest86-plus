@@ -70,6 +70,10 @@ iso:
 	make all
 	./makeiso.sh
 
+usb:
+	make all
+	sudo ./makeusb.sh
+
 install: all
 	dd <memtest.bin >$(FDISK) bs=8192
 
