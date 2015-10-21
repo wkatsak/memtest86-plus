@@ -30,7 +30,7 @@ dd if=/dev/zero of=memtest-usb.img bs=1M count=8
 
 # create partitions
 parted -s memtest-usb.img mklabel msdos
-parted -s memtest-usb.img mkpart primary fat16 1M 9M
+parted -s memtest-usb.img mkpart primary fat16 1M 8M
 parted -s memtest-usb.img set 1 boot on
 
 # install mbr
